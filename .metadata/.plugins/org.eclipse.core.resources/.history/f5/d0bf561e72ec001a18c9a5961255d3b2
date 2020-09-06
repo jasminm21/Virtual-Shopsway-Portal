@@ -1,0 +1,4 @@
+server.port=8761
+#server.application.name=discovery-server
+server.servlet.application-display-name=discovery-server
+eureka.client.register-with-eureka=false

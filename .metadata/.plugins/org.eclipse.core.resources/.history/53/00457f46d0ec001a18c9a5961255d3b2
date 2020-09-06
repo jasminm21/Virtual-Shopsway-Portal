@@ -1,0 +1,32 @@
+package com.xp.vspservice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.xp.vspservice.model.Product;
+import com.xp.vspservice.model.Products;
+
+@RestController
+@RequestMapping("/vps")
+public class VspController {
+	
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@GetMapping("/")
+	public String getAppName() {
+		return "VPS Server";
+	}
+	
+	@GetMapping("/products")
+	public List<Product> getAllProducts(){
+		Products products=restTemplate.getForObject("http://localhost:8081/products", Products.class);
+		List<Product> pList= products.getProductList();
+		pList.stream().map(p->p)
+	}
+}

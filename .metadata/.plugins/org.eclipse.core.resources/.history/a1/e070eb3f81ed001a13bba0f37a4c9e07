@@ -1,0 +1,12 @@
+
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: vsp-server
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+      
