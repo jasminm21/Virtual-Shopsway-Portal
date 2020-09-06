@@ -1,0 +1,51 @@
+ <!-- <div class="row"> -->
+            <!-- <div class="col-md-2">
+              Filter By
+            </div>
+            <div class="col-md-3">
+              <input type="text"
+                     [(ngModel)]='searchFilter'
+                     placeholder="Search..."
+                     class="form-control">
+            </div> -->
+            <!-- <div class="col-md-2">
+              <button class="btn btn-info"
+                      (click)="addProductView()"><span class="fa fa-plus"></span>&nbsp;Add Product</button>
+            </div> -->
+            <!-- <div class="col-md-3">
+              <p>{{notification}}</p>
+            </div> -->
+          <!-- </div> -->
+          <!-- <div class="row">
+            <div class="col-md-6">
+              <h4>Filtered By:{{searchFilter}}</h4>
+            </div>
+          </div> -->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Action</th>
+                <th scope="col"><button class="btn btn-info"
+                          (click)="toggleImage()">{{showImage ? 'Hide' : 'Show'}}</button></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let e of employees; index as i'>
+                <th scope="row">{{i+1}}</th>
+                <td>{{e.employeeName}}</td>
+                <td>{{e.address}}</td>
+                <td>{{e.designation}}</td>
+                <td>
+                  <button class="btn btn-success"><span class="fa fa-pencil"></span></button>&nbsp;
+                  <button class="btn btn-danger"><span class="fa fa-times"></span></button>
+                </td>
+                <td scope="row"><img src="./assets/images/hammer.png"
+                       alt=""
+                       *ngIf="showImage"></td>
+              </tr>
+            </tbody>
+          </table>

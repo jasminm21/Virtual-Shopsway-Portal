@@ -1,0 +1,47 @@
+
+<form (ngSubmit)="updateProduct(updateForm.value)" #updateForm='ngForm' >
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <label>Product Name</label>
+        </div>
+        <div class="col-md-6">
+            <input type="text"
+            class="form-control" [(ngModel)]='product.productName'
+            id="productName" name="productName"
+            value='{{product.productName}}'>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+            <div class="col-md-3">
+                <label>Product Cost</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" [(ngModel)]='product.cost'
+                class="form-control"
+                id="cost" name="cost"
+                value="{{product.cost}}">
+            </div>
+    </div>
+    <br>
+    <div class="row">
+            <div class="col-md-3">
+                <label>Ratings</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" [(ngModel)]='product.rating'
+                class="form-control"
+                id="rating" name="rating"
+                value="{{product.rating}}">
+            </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary">Update Product</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <a (click)="viewHeading()">VIEW</a>
+            <a (click)="addHeading()">ADD</a>
+        </div>
+    </div>
+    <div class="card-body">
+       <pm-employee-list *ngIf="temp"></pm-employee-list>
+       <pm-add-employee *ngIf="!temp"></pm-add-employee> 
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <p>Detail About Product</p>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="col-md-6">
+           
+            <form>
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text"
+                           id="productName"
+                           name="productName"
+                           class="form-control"
+                           readonly
+                           value="{{product.productName}}">
+                </div>
+                <div class="form-group">
+                    <label for="cost">Cost</label>
+                    <input type="text"
+                           id="cost"
+                           name="cost"
+                           class="form-control"
+                           readonly
+                           value="{{product.cost}}">
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="text"
+                           id="rating"
+                           name="rating"
+                           class="form-control"
+                           readonly
+                           value="{{product.rating}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary"
+                            routerLink='/products'>Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
